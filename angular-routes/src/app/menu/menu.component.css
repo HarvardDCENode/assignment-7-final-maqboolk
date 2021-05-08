@@ -1,0 +1,11 @@
+h1{
+    margin-left: 100px;
+    color:#026e00;
+    background-color: #eaf5e9;
+    width: fit-content;
+}
+.menuComponent{
+    border: 3px solid black;
+    width: 800px;
+    margin-left: 100px;
+}
