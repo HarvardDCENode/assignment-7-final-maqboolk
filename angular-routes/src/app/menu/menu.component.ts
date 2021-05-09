@@ -18,9 +18,14 @@ export class MenuComponent implements OnInit {
 
   // Getting menu form menuservice using Observer and Subscribe. 
   ngOnInit(): void {
+    this.updateItemList();
+  }
+
+  updateItemList() {
     this.menuService.getAllItems().subscribe((apiMenu) => {
       this.menu = apiMenu;
     })
   }
+
 
 }

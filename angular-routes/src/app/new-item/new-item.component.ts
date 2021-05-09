@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MenuService } from '../menu.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { MenuService } from '../menu.service';
 })
 export class NewItemComponent implements OnInit {
 
+  @Output() newItem = new EventEmitter();
   // object to hold new item vlaues as they are updated on form
   item: any = {};
 
@@ -25,6 +26,7 @@ export class NewItemComponent implements OnInit {
     this.menuService.addAnItem()
       .subscribe((addedItem) => {
         console.log('Added', addedItem);
+        this.newItem.emit();
       });
 
   }
