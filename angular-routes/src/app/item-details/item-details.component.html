@@ -6,6 +6,8 @@
     <div><b>Available:</b> {{ itemDetails.available? 'Yes' : 'No'}}</div>
     <div><b>Created At:</b> {{itemDetails.createdAt}}</div>
     <div><b>Updated At:</b> {{itemDetails.updatedAt? itemDetails.updatedAt : 'N/A'}}</div>
+    <div>Action : <button type="button" class="btn btn-danger" (click)='deleteAnItem($event)'>Delete this Item</button>
+    </div>
 
 </div>
 <div class='backtohome'>

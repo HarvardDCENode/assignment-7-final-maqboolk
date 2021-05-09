@@ -13,7 +13,8 @@ export class ItemDetailsComponent implements OnInit {
   itemDetails = null;
 
   // Making Service (Menu) available by passing it to constuctor
-  constructor(private route: ActivatedRoute,
+  constructor(
+    private route: ActivatedRoute,
     private router: Router,
     private menuService: MenuService) { }
 
@@ -23,6 +24,19 @@ export class ItemDetailsComponent implements OnInit {
       this.itemDetails = itemData;
       console.log(this.itemDetails);
     })
+  }
+
+  deleteAnItem(e: any) {
+    console.log('Delete Clicked ', e);
+    const confirmed = confirm('Delete an Item ?')
+    console.log('Confirmation ', confirmed);
+    if (confirmed) {
+      this.menuService.deleteAnItem(this.itemDetails._id)
+        .subscribe((deletedItem) => {
+          console.log('Item Deleted with Id', this.itemDetails._id);
+          this.router.navigate(['/']);
+        })
+    }
   }
 
 }

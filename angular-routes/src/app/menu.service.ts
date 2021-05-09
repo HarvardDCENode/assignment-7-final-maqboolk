@@ -16,7 +16,7 @@ export class MenuService {
   }
 
   // Api call to get individual item
-  getAnItem(itemId) {
+  getAnItem(itemId: any) {
     return this.http.get(this.apiurl + '/menu/' + itemId);
   }
 
@@ -26,10 +26,14 @@ export class MenuService {
     let item = {
       name: 'Test Item',
       price: 12.21,
-      ingredients: 'one  two three',
+      ingredients: 'one two three',
       available: true
     }
     return this.http.post(this.apiurl + '/menu', item);
+  }
+
+  deleteAnItem(itemId: any) {
+    return this.http.delete(this.apiurl + '/menu/' + itemId);
   }
 
 }
