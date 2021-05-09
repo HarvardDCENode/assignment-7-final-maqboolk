@@ -5,7 +5,7 @@ import { MenuService } from '../menu.service';
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
-  providers: [MenuService]
+  //providers: [MenuService]
 })
 export class MenuComponent implements OnInit {
 

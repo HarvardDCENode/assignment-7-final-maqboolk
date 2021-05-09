@@ -1,5 +1,8 @@
 <h1>Welcome to Lunch House</h1>
 <!-- <pre>{{menu | json}}</pre> -->
+<div class='newItemComponent'>
+    <app-new-item></app-new-item>
+</div>
 <div class='menuComponent'>
     <app-menu-item *ngFor='let item of menu' [item]='item'></app-menu-item>
 </div>

@@ -20,4 +20,16 @@ export class MenuService {
     return this.http.get(this.apiurl + '/menu/' + itemId);
   }
 
+  // Api call to add an item 
+  addAnItem() {
+    console.log('addAnItem');
+    let item = {
+      name: 'Test Item',
+      price: 12.21,
+      ingredients: 'one  two three',
+      available: true
+    }
+    return this.http.post(this.apiurl + '/menu', item);
+  }
+
 }

@@ -1,0 +1,23 @@
+
+h4{
+    margin: 10px;
+    border: 1px dotted grey;
+    background-color: #eaf5e9;
+    width:fit-content;
+}
+form{
+    margin: 10px;
+    border: 1px dotted grey;
+    background-color: #eaf5e9;
+    padding: 10px;
+}
+#name{
+    width: 300px;
+}
+#price{
+    width: 80px;
+}
+.form-check{
+    float: right;
+    margin-left: 10px;
+}
