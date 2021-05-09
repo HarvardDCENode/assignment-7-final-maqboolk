@@ -1,5 +1,6 @@
 h1{
-    margin-left: 100px;
+    margin-left: auto;
+    margin-right: auto;
     color:#026e00;
     background-color: #eaf5e9;
     width: fit-content;
@@ -7,5 +8,6 @@ h1{
 .menuComponent{
     border: 3px solid black;
     width: 800px;
-    margin-left: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }

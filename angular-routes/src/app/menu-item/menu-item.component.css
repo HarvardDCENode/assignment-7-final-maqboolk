@@ -3,8 +3,10 @@
     border: 1px dotted #212529;
     background-color: #eaf5e9;
     width:fit-content;
+    margin: 10px;
 }
 .menuItemComponentData{
+    margin: 10px;
     color: grey;
     border: 1px dotted grey;
     background-color: #eaf5e9;

@@ -2,14 +2,12 @@
 <div class='menuItemComponentData'>
     <div>Dish Name: {{item.name}}</div>
     <div>Price: ${{item.price}}</div>
-    <div>Ingredients: {{item.ingredients}}</div>
     <div>Available: {{ item.available? 'Yes' : 'No'}}
         <!-- Usage of *ngIf - Keeping this for future reference
     <span *ngIf='item.available'>Yes</span>
     <span *ngIf='!item.available'>No</span> 
     -->
     </div>
-    <div>Created At: {{item.createdAt}}</div>
-    <div>Updated At: {{item.updatedAt? item.updatedAt : 'N/A'}}</div>
+    <a routerLink='/item-details/{{item._id}}'>Item details</a>
 </div>
 <hr>

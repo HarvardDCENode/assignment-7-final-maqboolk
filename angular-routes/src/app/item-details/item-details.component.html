@@ -1,0 +1,15 @@
+<div *ngIf='itemDetails' class='menuItemComponentData'>
+    <div><b>Item ID:</b> {{itemDetails._id}}</div>
+    <div><b>Dish Name:</b> {{itemDetails.name}}</div>
+    <div><b>Price:</b> ${{itemDetails.price}}</div>
+    <div><b>Ingredients:</b> {{itemDetails.ingredients}}</div>
+    <div><b>Available:</b> {{ itemDetails.available? 'Yes' : 'No'}}</div>
+    <div><b>Created At:</b> {{itemDetails.createdAt}}</div>
+    <div><b>Updated At:</b> {{itemDetails.updatedAt? itemDetails.updatedAt : 'N/A'}}</div>
+
+</div>
+<div class='backtohome'>
+    <a routerLink='/ng-menu'>Back to Menu</a>
+</div>
+
+<hr>
