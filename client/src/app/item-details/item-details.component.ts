@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ItemDetailsComponent implements OnInit {
 
+  // holds an item detials when item is retrieved in ngOnInit()
   itemDetails = null;
 
   // Making Service (Menu) available by passing it to constuctor
@@ -18,6 +19,7 @@ export class ItemDetailsComponent implements OnInit {
     private router: Router,
     private menuService: MenuService) { }
 
+  // following function gets the item details using API 'getAnItem(id)'
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.menuService.getAnItem(id).subscribe((itemData) => {
@@ -26,6 +28,10 @@ export class ItemDetailsComponent implements OnInit {
     })
   }
 
+
+  /**
+   * Following function deletes and item and navigates back to '/'(main menu  page) 
+   */
   deleteAnItem(e: any) {
     console.log('Delete Clicked ', e);
     const confirmed = confirm(`Are you sure you want to delete "${this.itemDetails.name}" ?`);

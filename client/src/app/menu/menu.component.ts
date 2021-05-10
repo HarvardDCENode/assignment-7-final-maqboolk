@@ -5,10 +5,10 @@ import { MenuService } from '../menu.service';
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
-  //providers: [MenuService]
 })
 export class MenuComponent implements OnInit {
 
+  // holds all the menu items that are received from ngOnInit
   menu = null;
 
   // Making Service (Menu) available by passing it to constuctor
@@ -16,11 +16,12 @@ export class MenuComponent implements OnInit {
 
   }
 
-  // Getting menu form menuservice using Observer and Subscribe. 
+  // using updateItemList() function to avoid duplication of the code.
   ngOnInit(): void {
     this.updateItemList();
   }
 
+  // Getting menu from menuservice using Observer and Subscribe. 
   updateItemList() {
     this.menuService.getAllItems().subscribe((apiMenu) => {
       this.menu = apiMenu;

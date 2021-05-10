@@ -20,8 +20,10 @@ export class NewItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // I was having  issue with boolean value. I was not able to pass boolean value 
-  // to  form data so i am using  dummy data to create an  item.
+  // I was having  issue with boolean value for available. 
+  // I was not able to pass boolean value 
+  // to form data so i am using  dummy data to create an item.
+  // Data is hardcoded in the menu.service file.
   save(): void {
     this.menuService.addAnItem()
       .subscribe((addedItem) => {
