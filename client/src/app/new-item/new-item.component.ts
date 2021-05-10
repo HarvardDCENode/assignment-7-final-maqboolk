@@ -26,6 +26,7 @@ export class NewItemComponent implements OnInit {
     this.menuService.addAnItem()
       .subscribe((addedItem) => {
         console.log('Added', addedItem);
+        alert('New item added successfully. Scroll down to see new item.');
         this.newItem.emit();
       });
 

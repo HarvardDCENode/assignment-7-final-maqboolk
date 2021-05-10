@@ -28,12 +28,13 @@ export class ItemDetailsComponent implements OnInit {
 
   deleteAnItem(e: any) {
     console.log('Delete Clicked ', e);
-    const confirmed = confirm('Delete an Item ?')
+    const confirmed = confirm(`Are you sure you want to delete "${this.itemDetails.name}" ?`);
     console.log('Confirmation ', confirmed);
     if (confirmed) {
       this.menuService.deleteAnItem(this.itemDetails._id)
         .subscribe((deletedItem) => {
           console.log('Item Deleted with Id', this.itemDetails._id);
+          alert(`Item "${this.itemDetails.name}" deleted successfully.`);
           this.router.navigate(['/']);
         })
     }
