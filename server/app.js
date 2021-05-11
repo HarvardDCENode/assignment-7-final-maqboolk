@@ -51,7 +51,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 // app.use('/request', requestFormRouter);
 // app.use('/allrequests', allRequestsRouter);
-app.use('/menu', menuRouter);
+// app.use('/menu', menuRouter);
 
 
 app.use('/api/menu', apiMenuRouter);
