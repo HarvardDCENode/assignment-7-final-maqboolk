@@ -56,8 +56,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/menu', apiMenuRouter);
 // route to add angular project. Copied from canvass
-app.use('/', express.static('../client/dist')); //simple static route that will not work for an Angular SPA
-app.use('/', (req, res) => {
+app.use('', express.static('../client/dist')); //simple static route that will not work for an Angular SPA
+app.use('', (req, res) => {
     // filter for actual files we want to deliver from disk
     var pattern = new RegExp('(.css|.html|.js|.ico|.jpg|.png)+\/?$', 'gi');
     if (pattern.test(req.url)) {
