@@ -12,6 +12,7 @@ export class MenuService {
 
   // Api call to get all items
   getAllItems() {
+    console.log(this.apiurl);
     return this.http.get(this.apiurl + '/menu');
   }
 
