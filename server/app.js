@@ -48,10 +48,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Following routes are for Express app only. 
 // please ignore for assignment 7
-app.use('/', indexRouter);
-app.use('/request', requestFormRouter);
-app.use('/allrequests', allRequestsRouter);
-app.use('/menu', menuRouter);
+// app.use('/', indexRouter);
+// app.use('/request', requestFormRouter);
+// app.use('/allrequests', allRequestsRouter);
+// app.use('/menu', menuRouter);
 
 
 app.use('/api/menu', apiMenuRouter);
