@@ -1,7 +1,7 @@
 // wrap in IIFE to control scope
 (function () {
 
-    const baseURL = 'http://localhost:8080';
+    const baseURL = 'http://localhost:9090';
 
     function testAPIs() {
         const line = '-- -- -- -- -- -- -- -- -- -- ---';
